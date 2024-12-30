@@ -99,7 +99,7 @@ app.put("/updateScore", (req, res) => {
           });
       } else {
         res.json({
-          success: false,
+          success: true,
           message: "Score not updated. New score is not higher.",
         });
       }
