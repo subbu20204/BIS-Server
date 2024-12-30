@@ -19,7 +19,6 @@ mongoose
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 app.post("/auth", (req, res) => {
-  document.write("hi");
   const { email, password } = req.body;
 
   userModel
