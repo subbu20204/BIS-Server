@@ -19,7 +19,7 @@ mongoose
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 app.get("/", (req, res) => {
-  document.write("Hello World!");
+  console.log("Hello World!");
 });
 
 app.post("/auth", (req, res) => {
