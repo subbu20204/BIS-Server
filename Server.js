@@ -18,6 +18,10 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
+app.get("/", (req, res) => {
+  document.write("Hello World!");
+});
+
 app.post("/auth", (req, res) => {
   document.write("hi");
   const { email, password } = req.body;
