@@ -7,8 +7,8 @@ const userModel = require("./Models/LoginDB");
 dotenv.config();
 
 const app = express();
-// app.use(cors({ origin: "https://bis-client.vercel.app" }));
-app.use(cors());
+app.use(cors({ origin: "https://bis-client.vercel.app" }));
+// app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
