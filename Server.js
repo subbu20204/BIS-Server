@@ -83,7 +83,7 @@ app.put("/updateScore", (req, res) => {
           .json({ success: false, message: "User not found" });
       }
 
-      if (score > user.Score) {
+      if (score >= user.Score) {
         return userModel
           .findOneAndUpdate(
             { Username: username },
@@ -102,6 +102,7 @@ app.put("/updateScore", (req, res) => {
           success: false,
           message: "Score not updated. New score is not higher.",
           user,
+          score,
         });
       }
     })
