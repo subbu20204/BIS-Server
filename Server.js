@@ -101,6 +101,7 @@ app.put("/updateScore", (req, res) => {
         res.json({
           success: false,
           message: "Score not updated. New score is not higher.",
+          user,
         });
       }
     })
